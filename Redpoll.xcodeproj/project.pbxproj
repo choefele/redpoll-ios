@@ -17,6 +17,7 @@
 		62A42AF61D7322E000C362DE /* CreatePollViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A42AF51D7322E000C362DE /* CreatePollViewController.storyboard */; };
 		62A42AFB1D73250900C362DE /* ShowPollsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A42AFA1D73250900C362DE /* ShowPollsViewController.swift */; };
 		62A42AFD1D73263300C362DE /* ShowPollsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A42AFC1D73263300C362DE /* ShowPollsViewController.storyboard */; };
+		62D07B6E1D736038000C4E05 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D07B6D1D736038000C4E05 /* Poll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		62A42AF51D7322E000C362DE /* CreatePollViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreatePollViewController.storyboard; sourceTree = "<group>"; };
 		62A42AFA1D73250900C362DE /* ShowPollsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPollsViewController.swift; sourceTree = "<group>"; };
 		62A42AFC1D73263300C362DE /* ShowPollsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShowPollsViewController.storyboard; sourceTree = "<group>"; };
+		62D07B6D1D736038000C4E05 /* Poll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				62A305611D73147700A8CD57 /* MessagesViewController.swift */,
 				62A42AF91D73250900C362DE /* Show Polls */,
 				62A42AF21D73201800C362DE /* Create Poll */,
+				62D07B6C1D736038000C4E05 /* Model */,
 				624F4A301D7314D900C32864 /* Assets.xcassets */,
 				62A305681D73147700A8CD57 /* Info.plist */,
 			);
@@ -136,6 +139,14 @@
 				62A42AFC1D73263300C362DE /* ShowPollsViewController.storyboard */,
 			);
 			path = "Show Polls";
+			sourceTree = "<group>";
+		};
+		62D07B6C1D736038000C4E05 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				62D07B6D1D736038000C4E05 /* Poll.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D07B6E1D736038000C4E05 /* Poll.swift in Sources */,
 				62A305621D73147700A8CD57 /* MessagesViewController.swift in Sources */,
 				62A42AF41D73201800C362DE /* CreatePollViewController.swift in Sources */,
 				62A42AFB1D73250900C362DE /* ShowPollsViewController.swift in Sources */,
