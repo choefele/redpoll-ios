@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		624F4A311D7314D900C32864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 624F4A301D7314D900C32864 /* Assets.xcassets */; };
+		62597A671D73160800A56BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62597A661D73160800A56BF0 /* Assets.xcassets */; };
+		62A3055A1D73147700A8CD57 /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 62A305591D73147700A8CD57 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		62A3055F1D73147700A8CD57 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A3055E1D73147700A8CD57 /* Messages.framework */; };
+		62A305621D73147700A8CD57 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A305611D73147700A8CD57 /* MessagesViewController.swift */; };
+		62A305651D73147700A8CD57 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A305631D73147700A8CD57 /* MainInterface.storyboard */; };
+		62A42AF41D73201800C362DE /* CreatePollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A42AF31D73201800C362DE /* CreatePollViewController.swift */; };
+		62A42AF61D7322E000C362DE /* CreatePollViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A42AF51D7322E000C362DE /* CreatePollViewController.storyboard */; };
+		62A42AFB1D73250900C362DE /* ShowPollsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A42AFA1D73250900C362DE /* ShowPollsViewController.swift */; };
+		62A42AFD1D73263300C362DE /* ShowPollsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A42AFC1D73263300C362DE /* ShowPollsViewController.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		62A3055B1D73147700A8CD57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62A305491D73147700A8CD57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62A305581D73147700A8CD57;
+			remoteInfo = MessagesExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		62A3056E1D73147700A8CD57 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				62A3055A1D73147700A8CD57 /* MessagesExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		624F4A301D7314D900C32864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		62597A661D73160800A56BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		62A3054F1D73147700A8CD57 /* Redpoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redpoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62A305541D73147700A8CD57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62A305591D73147700A8CD57 /* MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		62A3055E1D73147700A8CD57 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		62A305611D73147700A8CD57 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		62A305641D73147700A8CD57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		62A305681D73147700A8CD57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62A42AF31D73201800C362DE /* CreatePollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePollViewController.swift; sourceTree = "<group>"; };
+		62A42AF51D7322E000C362DE /* CreatePollViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreatePollViewController.storyboard; sourceTree = "<group>"; };
+		62A42AFA1D73250900C362DE /* ShowPollsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPollsViewController.swift; sourceTree = "<group>"; };
+		62A42AFC1D73263300C362DE /* ShowPollsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShowPollsViewController.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62A305561D73147700A8CD57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62A3055F1D73147700A8CD57 /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62A305481D73147700A8CD57 = {
+			isa = PBXGroup;
+			children = (
+				62A305511D73147700A8CD57 /* Redpoll */,
+				62A305601D73147700A8CD57 /* MessagesExtension */,
+				62A3055D1D73147700A8CD57 /* Frameworks */,
+				62A305501D73147700A8CD57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		62A305501D73147700A8CD57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62A3054F1D73147700A8CD57 /* Redpoll.app */,
+				62A305591D73147700A8CD57 /* MessagesExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62A305511D73147700A8CD57 /* Redpoll */ = {
+			isa = PBXGroup;
+			children = (
+				62597A661D73160800A56BF0 /* Assets.xcassets */,
+				62A305541D73147700A8CD57 /* Info.plist */,
+			);
+			path = Redpoll;
+			sourceTree = "<group>";
+		};
+		62A3055D1D73147700A8CD57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62A3055E1D73147700A8CD57 /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62A305601D73147700A8CD57 /* MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				62A305631D73147700A8CD57 /* MainInterface.storyboard */,
+				62A305611D73147700A8CD57 /* MessagesViewController.swift */,
+				62A42AF91D73250900C362DE /* Show Polls */,
+				62A42AF21D73201800C362DE /* Create Poll */,
+				624F4A301D7314D900C32864 /* Assets.xcassets */,
+				62A305681D73147700A8CD57 /* Info.plist */,
+			);
+			path = MessagesExtension;
+			sourceTree = "<group>";
+		};
+		62A42AF21D73201800C362DE /* Create Poll */ = {
+			isa = PBXGroup;
+			children = (
+				62A42AF31D73201800C362DE /* CreatePollViewController.swift */,
+				62A42AF51D7322E000C362DE /* CreatePollViewController.storyboard */,
+			);
+			path = "Create Poll";
+			sourceTree = "<group>";
+		};
+		62A42AF91D73250900C362DE /* Show Polls */ = {
+			isa = PBXGroup;
+			children = (
+				62A42AFA1D73250900C362DE /* ShowPollsViewController.swift */,
+				62A42AFC1D73263300C362DE /* ShowPollsViewController.storyboard */,
+			);
+			path = "Show Polls";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62A3054E1D73147700A8CD57 /* Redpoll */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62A3056F1D73147700A8CD57 /* Build configuration list for PBXNativeTarget "Redpoll" */;
+			buildPhases = (
+				62A3054D1D73147700A8CD57 /* Resources */,
+				62A3056E1D73147700A8CD57 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62A3055C1D73147700A8CD57 /* PBXTargetDependency */,
+			);
+			name = Redpoll;
+			productName = Redpoll;
+			productReference = 62A3054F1D73147700A8CD57 /* Redpoll.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		62A305581D73147700A8CD57 /* MessagesExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62A3056B1D73147700A8CD57 /* Build configuration list for PBXNativeTarget "MessagesExtension" */;
+			buildPhases = (
+				62A305551D73147700A8CD57 /* Sources */,
+				62A305561D73147700A8CD57 /* Frameworks */,
+				62A305571D73147700A8CD57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessagesExtension;
+			productName = MessagesExtension;
+			productReference = 62A305591D73147700A8CD57 /* MessagesExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62A305491D73147700A8CD57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Claus Höfele";
+				TargetAttributes = {
+					62A3054E1D73147700A8CD57 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 44GL67YD3Z;
+						ProvisioningStyle = Automatic;
+					};
+					62A305581D73147700A8CD57 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 44GL67YD3Z;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 62A3054C1D73147700A8CD57 /* Build configuration list for PBXProject "Redpoll" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62A305481D73147700A8CD57;
+			productRefGroup = 62A305501D73147700A8CD57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62A3054E1D73147700A8CD57 /* Redpoll */,
+				62A305581D73147700A8CD57 /* MessagesExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62A3054D1D73147700A8CD57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62597A671D73160800A56BF0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A305571D73147700A8CD57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				624F4A311D7314D900C32864 /* Assets.xcassets in Resources */,
+				62A305651D73147700A8CD57 /* MainInterface.storyboard in Resources */,
+				62A42AF61D7322E000C362DE /* CreatePollViewController.storyboard in Resources */,
+				62A42AFD1D73263300C362DE /* ShowPollsViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62A305551D73147700A8CD57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62A305621D73147700A8CD57 /* MessagesViewController.swift in Sources */,
+				62A42AF41D73201800C362DE /* CreatePollViewController.swift in Sources */,
+				62A42AFB1D73250900C362DE /* ShowPollsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62A3055C1D73147700A8CD57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62A305581D73147700A8CD57 /* MessagesExtension */;
+			targetProxy = 62A3055B1D73147700A8CD57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		62A305631D73147700A8CD57 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62A305641D73147700A8CD57 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		62A305691D73147700A8CD57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		62A3056A1D73147700A8CD57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62A3056C1D73147700A8CD57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				DEVELOPMENT_TEAM = 44GL67YD3Z;
+				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.claushoefele.Redpoll.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		62A3056D1D73147700A8CD57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				DEVELOPMENT_TEAM = 44GL67YD3Z;
+				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.claushoefele.Redpoll.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		62A305701D73147700A8CD57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44GL67YD3Z;
+				INFOPLIST_FILE = Redpoll/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claushoefele.Redpoll;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62A305711D73147700A8CD57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44GL67YD3Z;
+				INFOPLIST_FILE = Redpoll/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claushoefele.Redpoll;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62A3054C1D73147700A8CD57 /* Build configuration list for PBXProject "Redpoll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62A305691D73147700A8CD57 /* Debug */,
+				62A3056A1D73147700A8CD57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62A3056B1D73147700A8CD57 /* Build configuration list for PBXNativeTarget "MessagesExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62A3056C1D73147700A8CD57 /* Debug */,
+				62A3056D1D73147700A8CD57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62A3056F1D73147700A8CD57 /* Build configuration list for PBXNativeTarget "Redpoll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62A305701D73147700A8CD57 /* Debug */,
+				62A305711D73147700A8CD57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62A305491D73147700A8CD57 /* Project object */;
+}
