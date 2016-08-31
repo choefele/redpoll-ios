@@ -1,0 +1,22 @@
+PODS:
+  - Eureka (1.7.0)
+
+DEPENDENCIES:
+  - Eureka (from `https://github.com/xmartlabs/Eureka.git`, branch `Swift3`)
+
+EXTERNAL SOURCES:
+  Eureka:
+    :branch: Swift3
+    :git: https://github.com/xmartlabs/Eureka.git
+
+CHECKOUT OPTIONS:
+  Eureka:
+    :commit: 681299540086d6974380d363be4b686a066f9bd5
+    :git: https://github.com/xmartlabs/Eureka.git
+
+SPEC CHECKSUMS:
+  Eureka: 2020d9faeef7b7e9adeb9e3d8af779e5931c1897
+
+PODFILE CHECKSUM: cff42dffaf080b2e36854a36ee17a7f949800651
+
+COCOAPODS: 1.1.0.beta.1

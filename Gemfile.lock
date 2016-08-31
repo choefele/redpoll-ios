@@ -75,6 +75,3 @@ PLATFORMS
 DEPENDENCIES
   cocoapods!
   xcodeproj!
-
-BUNDLED WITH
-   1.12.5

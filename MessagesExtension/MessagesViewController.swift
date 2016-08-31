@@ -65,7 +65,7 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     func instantiateViewController<ViewController>() -> ViewController {
-        let name = String(ViewController.self)
+        let name = String(describing: ViewController.self)
         let storyboard = UIStoryboard(name: name, bundle: nil)
         guard let controller = storyboard.instantiateInitialViewController() as? ViewController else { fatalError("Unable to instantiate view controller \(name) from storyboard \(name).storyboard") }
         

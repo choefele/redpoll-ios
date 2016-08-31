@@ -1,0 +1,6 @@
+framework module Pods_Redpoll {
+  umbrella header "Pods-Redpoll-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -18,6 +18,8 @@
 		62A42AFB1D73250900C362DE /* ShowPollsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A42AFA1D73250900C362DE /* ShowPollsViewController.swift */; };
 		62A42AFD1D73263300C362DE /* ShowPollsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A42AFC1D73263300C362DE /* ShowPollsViewController.storyboard */; };
 		62D07B6E1D736038000C4E05 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D07B6D1D736038000C4E05 /* Poll.swift */; };
+		CF311FBF9C6A0DDBF2A77679 /* Pods_MessagesExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B594AB61F0B52605C79921 /* Pods_MessagesExtension.framework */; };
+		FC11903EDECAD26A9B4D276C /* Pods_Redpoll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1DE66342E7F65E89A366C3 /* Pods_Redpoll.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		054DEC233EBBDCEB86F739A0 /* Pods-MessagesExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		11B594AB61F0B52605C79921 /* Pods_MessagesExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagesExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		624F4A301D7314D900C32864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62597A661D73160800A56BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62A3054F1D73147700A8CD57 /* Redpoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redpoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +63,10 @@
 		62A42AFA1D73250900C362DE /* ShowPollsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPollsViewController.swift; sourceTree = "<group>"; };
 		62A42AFC1D73263300C362DE /* ShowPollsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShowPollsViewController.storyboard; sourceTree = "<group>"; };
 		62D07B6D1D736038000C4E05 /* Poll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
+		A574D8771FE79A1717418258 /* Pods-MessagesExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.release.xcconfig"; sourceTree = "<group>"; };
+		B956750B9F7569E0A78B5DBF /* Pods-Redpoll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Redpoll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Redpoll/Pods-Redpoll.debug.xcconfig"; sourceTree = "<group>"; };
+		DC740D87C584B043196243F5 /* Pods-Redpoll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Redpoll.release.xcconfig"; path = "Pods/Target Support Files/Pods-Redpoll/Pods-Redpoll.release.xcconfig"; sourceTree = "<group>"; };
+		FA1DE66342E7F65E89A366C3 /* Pods_Redpoll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Redpoll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +75,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				62A3055F1D73147700A8CD57 /* Messages.framework in Frameworks */,
+				CF311FBF9C6A0DDBF2A77679 /* Pods_MessagesExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9662209305AD22A1A9FE87D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC11903EDECAD26A9B4D276C /* Pods_Redpoll.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E72D1F4F8DE48AC60F12361 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				054DEC233EBBDCEB86F739A0 /* Pods-MessagesExtension.debug.xcconfig */,
+				A574D8771FE79A1717418258 /* Pods-MessagesExtension.release.xcconfig */,
+				B956750B9F7569E0A78B5DBF /* Pods-Redpoll.debug.xcconfig */,
+				DC740D87C584B043196243F5 /* Pods-Redpoll.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		62A305481D73147700A8CD57 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +108,7 @@
 				62A305601D73147700A8CD57 /* MessagesExtension */,
 				62A3055D1D73147700A8CD57 /* Frameworks */,
 				62A305501D73147700A8CD57 /* Products */,
+				4E72D1F4F8DE48AC60F12361 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				62A3055E1D73147700A8CD57 /* Messages.framework */,
+				11B594AB61F0B52605C79921 /* Pods_MessagesExtension.framework */,
+				FA1DE66342E7F65E89A366C3 /* Pods_Redpoll.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,8 +187,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62A3056F1D73147700A8CD57 /* Build configuration list for PBXNativeTarget "Redpoll" */;
 			buildPhases = (
+				9A43EC8D11A4548CF75A09BB /* [CP] Check Pods Manifest.lock */,
 				62A3054D1D73147700A8CD57 /* Resources */,
 				62A3056E1D73147700A8CD57 /* Embed App Extensions */,
+				9662209305AD22A1A9FE87D7 /* Frameworks */,
+				B3A65866BF094FB4A68846F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62A3056B1D73147700A8CD57 /* Build configuration list for PBXNativeTarget "MessagesExtension" */;
 			buildPhases = (
+				6C093F36C70AA7821E0C7989 /* [CP] Check Pods Manifest.lock */,
 				62A305551D73147700A8CD57 /* Sources */,
 				62A305561D73147700A8CD57 /* Frameworks */,
 				62A305571D73147700A8CD57 /* Resources */,
+				1B2E8356DB8D3F522AA2B20C /* [CP] Embed Pods Frameworks */,
+				94D13B9334E7783413709C64 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,6 +285,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B2E8356DB8D3F522AA2B20C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C093F36C70AA7821E0C7989 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		94D13B9334E7783413709C64 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A43EC8D11A4548CF75A09BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B3A65866BF094FB4A68846F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Redpoll/Pods-Redpoll-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		62A305551D73147700A8CD57 /* Sources */ = {
@@ -376,6 +491,7 @@
 		};
 		62A3056C1D73147700A8CD57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 054DEC233EBBDCEB86F739A0 /* Pods-MessagesExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = 44GL67YD3Z;
@@ -390,6 +506,7 @@
 		};
 		62A3056D1D73147700A8CD57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A574D8771FE79A1717418258 /* Pods-MessagesExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = 44GL67YD3Z;
@@ -404,6 +521,7 @@
 		};
 		62A305701D73147700A8CD57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B956750B9F7569E0A78B5DBF /* Pods-Redpoll.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -418,6 +536,7 @@
 		};
 		62A305711D73147700A8CD57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC740D87C584B043196243F5 /* Pods-Redpoll.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
