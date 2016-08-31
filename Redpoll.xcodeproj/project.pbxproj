@@ -17,6 +17,7 @@
 		62A42AF61D7322E000C362DE /* CreatePollViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A42AF51D7322E000C362DE /* CreatePollViewController.storyboard */; };
 		62A42AFB1D73250900C362DE /* ShowPollsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A42AFA1D73250900C362DE /* ShowPollsViewController.swift */; };
 		62A42AFD1D73263300C362DE /* ShowPollsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A42AFC1D73263300C362DE /* ShowPollsViewController.storyboard */; };
+		62BE7A651D7762B5001CDAE6 /* PollForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE7A641D7762B5001CDAE6 /* PollForm.swift */; };
 		62D07B6E1D736038000C4E05 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D07B6D1D736038000C4E05 /* Poll.swift */; };
 		CF311FBF9C6A0DDBF2A77679 /* Pods_MessagesExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B594AB61F0B52605C79921 /* Pods_MessagesExtension.framework */; };
 		FC11903EDECAD26A9B4D276C /* Pods_Redpoll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1DE66342E7F65E89A366C3 /* Pods_Redpoll.framework */; };
@@ -62,6 +63,7 @@
 		62A42AF51D7322E000C362DE /* CreatePollViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreatePollViewController.storyboard; sourceTree = "<group>"; };
 		62A42AFA1D73250900C362DE /* ShowPollsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPollsViewController.swift; sourceTree = "<group>"; };
 		62A42AFC1D73263300C362DE /* ShowPollsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShowPollsViewController.storyboard; sourceTree = "<group>"; };
+		62BE7A641D7762B5001CDAE6 /* PollForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollForm.swift; sourceTree = "<group>"; };
 		62D07B6D1D736038000C4E05 /* Poll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
 		A574D8771FE79A1717418258 /* Pods-MessagesExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.release.xcconfig"; sourceTree = "<group>"; };
 		B956750B9F7569E0A78B5DBF /* Pods-Redpoll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Redpoll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Redpoll/Pods-Redpoll.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				62D07B6D1D736038000C4E05 /* Poll.swift */,
+				62BE7A641D7762B5001CDAE6 /* PollForm.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				62A305621D73147700A8CD57 /* MessagesViewController.swift in Sources */,
 				62A42AF41D73201800C362DE /* CreatePollViewController.swift in Sources */,
 				62A42AFB1D73250900C362DE /* ShowPollsViewController.swift in Sources */,
+				62BE7A651D7762B5001CDAE6 /* PollForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

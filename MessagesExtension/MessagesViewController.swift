@@ -72,3 +72,14 @@ class MessagesViewController: MSMessagesAppViewController {
         return controller
     }
 }
+
+extension MessagesViewController: CreatePollViewControllerDelegate {
+    func createPollViewController(createPollViewController: CreatePollViewController, didUpdatePollForm pollForm: PollForm) {
+    }
+    
+    func createPollViewController(createPollViewController: CreatePollViewController, didCreatePollForm pollForm: PollForm) {
+    }
+    
+    func createPollViewControllerDidCancel(createPollViewController: CreatePollViewController) {
+    }
+}
