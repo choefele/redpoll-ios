@@ -27,11 +27,11 @@ class MessagesViewController: MSMessagesAppViewController {
         let controller: UIViewController
         
         if presentationStyle == .compact {
-            let showPollsViewController: ShowPollsViewController = instantiateViewController()
-            controller = showPollsViewController
+            let pollListViewController: PollListViewController = instantiateViewController()
+            controller = pollListViewController
         } else {
-            let createPollViewController: CreatePollViewController = instantiateViewController()
-            controller = createPollViewController
+            let pollViewController: PollViewController = instantiateViewController()
+            controller = pollViewController
             
 //            let iceCream = IceCream(message: conversation.selectedMessage) ?? IceCream()
 //            
@@ -67,19 +67,19 @@ class MessagesViewController: MSMessagesAppViewController {
     func instantiateViewController<ViewController>() -> ViewController {
         let name = String(describing: ViewController.self)
         let storyboard = UIStoryboard(name: name, bundle: nil)
-        guard let controller = storyboard.instantiateInitialViewController() as? ViewController else { fatalError("Unable to instantiate view controller \(name) from storyboard \(name).storyboard") }
+        guard let controller = storyboard.instantiateInitialViewController() as? ViewController else { fatalError("Unable to instantiate initial view controller from storyboard \(name).storyboard") }
         
         return controller
     }
 }
 
-extension MessagesViewController: CreatePollViewControllerDelegate {
-    func createPollViewController(createPollViewController: CreatePollViewController, didUpdatePollForm pollForm: PollForm) {
+extension MessagesViewController: PollViewControllerDelegate {
+    func pollViewController(createPollViewController: PollViewController, didUpdatePollForm pollForm: PollForm) {
     }
     
-    func createPollViewController(createPollViewController: CreatePollViewController, didCreatePollForm pollForm: PollForm) {
+    func pollViewController(createPollViewController: PollViewController, didCreatePollForm pollForm: PollForm) {
     }
     
-    func createPollViewControllerDidCancel(createPollViewController: CreatePollViewController) {
+    func pollViewControllerDidCancel(createPollViewController: PollViewController) {
     }
 }

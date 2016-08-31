@@ -9,14 +9,14 @@
 import UIKit
 import Eureka
 
-protocol CreatePollViewControllerDelegate: class {
-    func createPollViewController(createPollViewController: CreatePollViewController, didUpdatePollForm pollForm: PollForm)
-    func createPollViewController(createPollViewController: CreatePollViewController, didCreatePollForm pollForm: PollForm)
-    func createPollViewControllerDidCancel(createPollViewController: CreatePollViewController)
+protocol PollViewControllerDelegate: class {
+    func pollViewController(createPollViewController: PollViewController, didUpdatePollForm pollForm: PollForm)
+    func pollViewController(createPollViewController: PollViewController, didCreatePollForm pollForm: PollForm)
+    func pollViewControllerDidCancel(createPollViewController: PollViewController)
 }
 
-class CreatePollViewController: FormViewController {
-    weak var delegate: CreatePollViewControllerDelegate?
+class PollViewController: FormViewController {
+    weak var delegate: PollViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
