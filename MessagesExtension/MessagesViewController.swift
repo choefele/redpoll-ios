@@ -58,8 +58,8 @@ class MessagesViewController: MSMessagesAppViewController {
         
         controller.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         controller.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        controller.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        controller.view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
+        controller.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
         
         controller.didMove(toParentViewController: self)
     }
