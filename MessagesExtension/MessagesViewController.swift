@@ -65,7 +65,7 @@ class MessagesViewController: MSMessagesAppViewController {
         controller.didMove(toParentViewController: self)
     }
     
-    func instantiateViewController<ViewController>() -> ViewController {
+    private func instantiateViewController<ViewController>() -> ViewController {
         let name = String(describing: ViewController.self)
         let storyboard = UIStoryboard(name: name, bundle: nil)
         guard let controller = storyboard.instantiateInitialViewController() as? ViewController else { fatalError("Unable to instantiate initial view controller from storyboard \(name).storyboard") }
@@ -79,6 +79,31 @@ extension MessagesViewController: PollViewControllerDelegate {
     }
     
     func pollViewController(pollViewController: PollViewController, didCreatePollForm pollForm: PollForm) {
-        requestPresentationStyle(.compact)
+        guard let conversation = activeConversation else { fatalError("Expected a conversation") }
+
+        let message = composeMessage(with: pollForm, caption: "Caption", session: conversation.selectedMessage?.session)
+
+        conversation.insert(message) { error in
+            if let error = error {
+                print(error)
+            }
+        }
+
+        dismiss()
+    }
+
+    private func composeMessage(with pollForm: PollForm, caption: String, session: MSSession? = nil) -> MSMessage {
+        let message = MSMessage(session: session ?? MSSession())
+
+        //        var components = URLComponents()
+        //        components.queryItems = iceCream.queryItems
+        //        message.url = components.url!
+
+        let layout = MSMessageTemplateLayout()
+        //        layout.image = iceCream.renderSticker(opaque: true)
+        layout.caption = caption
+        message.layout = layout
+        
+        return message
     }
 }
