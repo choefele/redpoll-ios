@@ -8,9 +8,12 @@
 
 import UIKit
 import Messages
+import Charts
 
 class MessagesViewController: MSMessagesAppViewController {
-    
+
+    @IBOutlet weak var pieChartView: PieChartView!
+
     override func willBecomeActive(with conversation: MSConversation) {
         super.willBecomeActive(with: conversation)
         
@@ -50,19 +53,25 @@ class MessagesViewController: MSMessagesAppViewController {
             child.removeFromParentViewController()
         }
         
-        // Embed the new controller.
-        addChildViewController(controller)
-        
-        controller.view.frame = view.bounds
-        controller.view.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(controller.view)
-        
-        controller.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        controller.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        controller.view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
-        controller.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
-        
-        controller.didMove(toParentViewController: self)
+//        // Embed the new controller.
+//        addChildViewController(controller)
+//        
+//        controller.view.frame = view.bounds
+//        controller.view.translatesAutoresizingMaskIntoConstraints = false
+//        view.addSubview(controller.view)
+//        
+//        controller.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+//        controller.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+//        controller.view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
+//        controller.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
+//        
+//        controller.didMove(toParentViewController: self)
+
+        let yVals = [BarChartDataEntry(value: 1, xIndex: 0), BarChartDataEntry(value: 2, xIndex: 1), BarChartDataEntry(value: 3, xIndex: 3)]
+        let dataSet = PieChartDataSet(yVals: yVals, label: "Label")
+        let xVals = ["1", "2", "3"]
+        let data = PieChartData(xVals: xVals, dataSet: dataSet)
+        pieChartView.data = data
     }
     
     private func instantiateViewController<ViewController>() -> ViewController {
@@ -71,39 +80,5 @@ class MessagesViewController: MSMessagesAppViewController {
         guard let controller = storyboard.instantiateInitialViewController() as? ViewController else { fatalError("Unable to instantiate initial view controller from storyboard \(name).storyboard") }
         
         return controller
-    }
-}
-
-extension MessagesViewController: PollViewControllerDelegate {
-    func pollViewController(pollViewController: PollViewController, didUpdatePollForm pollForm: PollForm) {
-    }
-    
-    func pollViewController(pollViewController: PollViewController, didCreatePollForm pollForm: PollForm) {
-        guard let conversation = activeConversation else { fatalError("Expected a conversation") }
-
-        let message = composeMessage(with: pollForm, caption: "Caption", session: conversation.selectedMessage?.session)
-
-        conversation.insert(message) { error in
-            if let error = error {
-                print(error)
-            }
-        }
-
-        dismiss()
-    }
-
-    private func composeMessage(with pollForm: PollForm, caption: String, session: MSSession? = nil) -> MSMessage {
-        let message = MSMessage(session: session ?? MSSession())
-
-        //        var components = URLComponents()
-        //        components.queryItems = iceCream.queryItems
-        //        message.url = components.url!
-
-        let layout = MSMessageTemplateLayout()
-        //        layout.image = iceCream.renderSticker(opaque: true)
-        layout.caption = caption
-        message.layout = layout
-        
-        return message
     }
 }
