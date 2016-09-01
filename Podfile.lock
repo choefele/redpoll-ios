@@ -1,22 +1,33 @@
 PODS:
+  - Charts (2.2.5):
+    - Charts/Core (= 2.2.5)
+  - Charts/Core (2.2.5)
   - Eureka (1.7.0)
 
 DEPENDENCIES:
+  - Charts (from `https://github.com/danielgindi/Charts.git`, branch `Swift-3.0`)
   - Eureka (from `https://github.com/xmartlabs/Eureka.git`, branch `Swift3`)
 
 EXTERNAL SOURCES:
+  Charts:
+    :branch: Swift-3.0
+    :git: https://github.com/danielgindi/Charts.git
   Eureka:
     :branch: Swift3
     :git: https://github.com/xmartlabs/Eureka.git
 
 CHECKOUT OPTIONS:
+  Charts:
+    :commit: ce4e1809f521850548f5c78622908d02f0869c1d
+    :git: https://github.com/danielgindi/Charts.git
   Eureka:
     :commit: 681299540086d6974380d363be4b686a066f9bd5
     :git: https://github.com/xmartlabs/Eureka.git
 
 SPEC CHECKSUMS:
+  Charts: b48fcc8d7190de910ff9e9748f5360c8ea7856e5
   Eureka: 2020d9faeef7b7e9adeb9e3d8af779e5931c1897
 
-PODFILE CHECKSUM: cff42dffaf080b2e36854a36ee17a7f949800651
+PODFILE CHECKSUM: 6ae1f07e81bcaa01607a53e7f5a815393906745e
 
 COCOAPODS: 1.1.0.beta.1
