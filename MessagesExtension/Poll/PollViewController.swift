@@ -19,30 +19,38 @@ class PollViewController: FormViewController {
 
     private var pollForm = PollForm()
     private let titleRow = TextRow()
+    private var optionsSection = Section("Options")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let section0 = Section()
-        form.append(section0)
+
+        let titleSection = Section()
+        form.append(titleSection)
 
         titleRow.title = "Title"
         titleRow.placeholder = "Enter text here"
         titleRow.onChange({ [unowned self] row in
             self.updatePoll()
         })
-        section0.append(titleRow)
+        titleSection.append(titleRow)
 
-        let section1 = Section("Options")
-        form.append(section1)
-        section1.append(DateRow() { row in
+        form.append(optionsSection)
+        optionsSection.append(DateRow() { row in
             row.title = "Date Row"
             row.value = Date(timeIntervalSinceReferenceDate: 0)
         })
-
-        let section2 = Section()
-        form.append(section2)
-        section2.append(ButtonRow() { row in
+        optionsSection.append(ButtonRow() { row in
+            row.title = "Add option"
+            row.onCellSelection({ [unowned self] cell, row in
+                self.optionsSection.insert(DateRow() { row in
+                    row.title = "Date Row"
+                    row.value = Date(timeIntervalSinceReferenceDate: 0)
+                }, at:self.optionsSection.count - 1)
+            })
+        })
+        let buttonSection = Section()
+        form.append(buttonSection)
+        buttonSection.append(ButtonRow() { row in
             row.title = "Create Poll"
             row.onCellSelection({ [unowned self] cell, row in
                 self.createPoll()
@@ -52,6 +60,13 @@ class PollViewController: FormViewController {
 
     private func updatePoll() {
         pollForm.title = titleRow.value
+
+        pollForm.options.removeAll()
+        for row in optionsSection {
+            if let dateRow = row as? DateRow, let dateRowValue = dateRow.value {
+                pollForm.options.append(.date(dateRowValue))
+            }
+        }
 
         delegate?.pollViewController(pollViewController: self, didUpdatePollForm: pollForm)
     }

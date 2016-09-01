@@ -10,5 +10,5 @@ import Foundation
 
 struct PollForm {
     var title: String?
-    var options: [PollOptionValue]?
+    var options = [PollOptionValue]()
 }
