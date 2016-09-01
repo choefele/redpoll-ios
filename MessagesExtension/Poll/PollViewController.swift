@@ -10,33 +10,53 @@ import UIKit
 import Eureka
 
 protocol PollViewControllerDelegate: class {
-    func pollViewController(createPollViewController: PollViewController, didUpdatePollForm pollForm: PollForm)
-    func pollViewController(createPollViewController: PollViewController, didCreatePollForm pollForm: PollForm)
-    func pollViewControllerDidCancel(createPollViewController: PollViewController)
+    func pollViewController(pollViewController: PollViewController, didUpdatePollForm pollForm: PollForm)
+    func pollViewController(pollViewController: PollViewController, didCreatePollForm pollForm: PollForm)
 }
 
 class PollViewController: FormViewController {
     weak var delegate: PollViewControllerDelegate?
+
+    private var pollForm = PollForm()
+    private let titleRow = TextRow()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let section0 = Section("Section1")
+        let section0 = Section()
         form.append(section0)
-        section0.append(TextRow() { row in
-            row.title = "Text Row"
-            row.placeholder = "Enter text here"
+
+        titleRow.title = "Title"
+        titleRow.placeholder = "Enter text here"
+        titleRow.onChange({ [unowned self] row in
+            self.updatePoll()
         })
-        section0.append(PhoneRow() {
-            $0.title = "Phone Row"
-            $0.placeholder = "And numbers here"
-        })
-        
-        let section1 = Section("Section1")
+        section0.append(titleRow)
+
+        let section1 = Section("Options")
         form.append(section1)
-        section1.append(DateRow() {
-            $0.title = "Date Row"
-            $0.value = Date(timeIntervalSinceReferenceDate: 0)
+        section1.append(DateRow() { row in
+            row.title = "Date Row"
+            row.value = Date(timeIntervalSinceReferenceDate: 0)
         })
+
+        let section2 = Section()
+        form.append(section2)
+        section2.append(ButtonRow() { row in
+            row.title = "Create Poll"
+            row.onCellSelection({ [unowned self] cell, row in
+                self.createPoll()
+            })
+        })
+    }
+
+    private func updatePoll() {
+        pollForm.title = titleRow.value
+
+        delegate?.pollViewController(pollViewController: self, didUpdatePollForm: pollForm)
+    }
+
+    private func createPoll() {
+        delegate?.pollViewController(pollViewController: self, didCreatePollForm: pollForm)
     }
 }

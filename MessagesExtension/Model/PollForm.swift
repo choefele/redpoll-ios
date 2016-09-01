@@ -9,6 +9,6 @@
 import Foundation
 
 struct PollForm {
-    var title: String
-    var options: [PollOptionValue]
+    var title: String?
+    var options: [PollOptionValue]?
 }

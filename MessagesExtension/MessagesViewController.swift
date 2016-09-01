@@ -31,6 +31,7 @@ class MessagesViewController: MSMessagesAppViewController {
             controller = pollListViewController
         } else {
             let pollViewController: PollViewController = instantiateViewController()
+            pollViewController.delegate = self
             controller = pollViewController
             
 //            let iceCream = IceCream(message: conversation.selectedMessage) ?? IceCream()
@@ -74,12 +75,10 @@ class MessagesViewController: MSMessagesAppViewController {
 }
 
 extension MessagesViewController: PollViewControllerDelegate {
-    func pollViewController(createPollViewController: PollViewController, didUpdatePollForm pollForm: PollForm) {
+    func pollViewController(pollViewController: PollViewController, didUpdatePollForm pollForm: PollForm) {
     }
     
-    func pollViewController(createPollViewController: PollViewController, didCreatePollForm pollForm: PollForm) {
-    }
-    
-    func pollViewControllerDidCancel(createPollViewController: PollViewController) {
+    func pollViewController(pollViewController: PollViewController, didCreatePollForm pollForm: PollForm) {
+        requestPresentationStyle(.compact)
     }
 }
