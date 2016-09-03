@@ -10,6 +10,7 @@
 		03D1D1A41D787959009B1F0A /* MessagesViewController+PollViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1D1A31D787959009B1F0A /* MessagesViewController+PollViewControllerDelegate.swift */; };
 		624F4A311D7314D900C32864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 624F4A301D7314D900C32864 /* Assets.xcassets */; };
 		62597A671D73160800A56BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62597A661D73160800A56BF0 /* Assets.xcassets */; };
+		628F9A9E1D7B5C5E00BC7913 /* PollViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628F9A9D1D7B5C5E00BC7913 /* PollViewController2.swift */; };
 		62A3055A1D73147700A8CD57 /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 62A305591D73147700A8CD57 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		62A3055F1D73147700A8CD57 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A3055E1D73147700A8CD57 /* Messages.framework */; };
 		62A305621D73147700A8CD57 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A305611D73147700A8CD57 /* MessagesViewController.swift */; };
@@ -54,6 +55,7 @@
 		11B594AB61F0B52605C79921 /* Pods_MessagesExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagesExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		624F4A301D7314D900C32864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62597A661D73160800A56BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		628F9A9D1D7B5C5E00BC7913 /* PollViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollViewController2.swift; sourceTree = "<group>"; };
 		62A3054F1D73147700A8CD57 /* Redpoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redpoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A305541D73147700A8CD57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62A305591D73147700A8CD57 /* MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +175,7 @@
 			children = (
 				62BE7A6A1D7765FC001CDAE6 /* PollViewController.storyboard */,
 				62BE7A6B1D7765FC001CDAE6 /* PollViewController.swift */,
+				628F9A9D1D7B5C5E00BC7913 /* PollViewController2.swift */,
 			);
 			path = Poll;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62D07B6E1D736038000C4E05 /* Poll.swift in Sources */,
+				628F9A9E1D7B5C5E00BC7913 /* PollViewController2.swift in Sources */,
 				03D1D1A41D787959009B1F0A /* MessagesViewController+PollViewControllerDelegate.swift in Sources */,
 				62BE7A6D1D7765FC001CDAE6 /* PollListViewController.swift in Sources */,
 				62A305621D73147700A8CD57 /* MessagesViewController.swift in Sources */,

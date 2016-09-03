@@ -3,10 +3,12 @@ PODS:
     - Charts/Core (= 2.2.5)
   - Charts/Core (2.2.5)
   - Eureka (1.7.0)
+  - XLForm (3.2.0)
 
 DEPENDENCIES:
   - Charts (from `https://github.com/danielgindi/Charts.git`, branch `Swift-3.0`)
   - Eureka (from `https://github.com/xmartlabs/Eureka.git`, branch `Swift3`)
+  - XLForm
 
 EXTERNAL SOURCES:
   Charts:
@@ -27,7 +29,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Charts: b48fcc8d7190de910ff9e9748f5360c8ea7856e5
   Eureka: 2020d9faeef7b7e9adeb9e3d8af779e5931c1897
+  XLForm: 2250b4e96ab8ffa5f3355838c79edd90de451782
 
-PODFILE CHECKSUM: 6ae1f07e81bcaa01607a53e7f5a815393906745e
+PODFILE CHECKSUM: a0609af9b7ee5c44897c1b96742684e501eb8d90
 
 COCOAPODS: 1.1.0.beta.1

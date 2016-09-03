@@ -30,7 +30,7 @@ class MessagesViewController: MSMessagesAppViewController {
             let pollListViewController: PollListViewController = instantiateViewController()
             controller = pollListViewController
         } else {
-            let pollViewController: PollViewController = instantiateViewController()
+            let pollViewController: PollViewController2 = instantiateViewController(storyboardName: "PollViewController")
             pollViewController.delegate = self
             controller = pollViewController
             
@@ -65,10 +65,9 @@ class MessagesViewController: MSMessagesAppViewController {
         controller.didMove(toParentViewController: self)
     }
     
-    private func instantiateViewController<ViewController>() -> ViewController {
-        let name = String(describing: ViewController.self)
-        let storyboard = UIStoryboard(name: name, bundle: nil)
-        guard let controller = storyboard.instantiateInitialViewController() as? ViewController else { fatalError("Unable to instantiate initial view controller from storyboard \(name).storyboard") }
+    private func instantiateViewController<ViewController>(storyboardName: String = String(describing: ViewController.self)) -> ViewController {
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        guard let controller = storyboard.instantiateInitialViewController() as? ViewController else { fatalError("Unable to instantiate initial view controller from storyboard \(storyboardName).storyboard") }
         
         return controller
     }
