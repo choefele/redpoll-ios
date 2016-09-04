@@ -61,12 +61,12 @@ class PollViewController: FormViewController {
     private func updatePoll() {
         pollForm.title = titleRow.value
 
-        pollForm.options.removeAll()
-        for row in optionsSection {
-            if let dateRow = row as? DateRow, let dateRowValue = dateRow.value {
-                pollForm.options.append(.date(dateRowValue))
-            }
-        }
+//        pollForm.options.removeAll()
+//        for row in optionsSection {
+//            if let dateRow = row as? DateRow, let dateRowValue = dateRow.value {
+////                pollForm.options.append(.date(dateRowValue))
+//            }
+//        }
 
         delegate?.pollViewController(pollViewController: self, didUpdatePollForm: pollForm)
     }

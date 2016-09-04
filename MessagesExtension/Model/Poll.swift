@@ -20,5 +20,5 @@ struct PollOption {
 }
 
 enum PollOptionValue {
-    case date(Date)
+    case string(String)
 }
