@@ -507,7 +507,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 054DEC233EBBDCEB86F739A0 /* Pods-MessagesExtension.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = 44GL67YD3Z;
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
@@ -523,7 +522,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A574D8771FE79A1717418258 /* Pods-MessagesExtension.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = 44GL67YD3Z;
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
@@ -539,7 +537,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B956750B9F7569E0A78B5DBF /* Pods-Redpoll.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 44GL67YD3Z;
 				INFOPLIST_FILE = Redpoll/Info.plist;
@@ -554,7 +551,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DC740D87C584B043196243F5 /* Pods-Redpoll.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 44GL67YD3Z;
 				INFOPLIST_FILE = Redpoll/Info.plist;
