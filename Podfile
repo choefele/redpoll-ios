@@ -6,7 +6,7 @@ end
 
 target 'MessagesExtension' do
     pod 'Charts', :git => 'https://github.com/danielgindi/Charts.git', :branch => 'Swift-3.0'
-    pod 'XLForm'
+    pod 'XLForm', :git => 'https://github.com/choefele/XLForm'
 end
 
 post_install do |installer_representation|

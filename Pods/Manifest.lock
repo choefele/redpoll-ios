@@ -6,22 +6,27 @@ PODS:
 
 DEPENDENCIES:
   - Charts (from `https://github.com/danielgindi/Charts.git`, branch `Swift-3.0`)
-  - XLForm
+  - XLForm (from `https://github.com/choefele/XLForm`)
 
 EXTERNAL SOURCES:
   Charts:
     :branch: Swift-3.0
     :git: https://github.com/danielgindi/Charts.git
+  XLForm:
+    :git: https://github.com/choefele/XLForm
 
 CHECKOUT OPTIONS:
   Charts:
     :commit: 7a9b1c383a7b57f07dc2bed6f756463c327d2250
     :git: https://github.com/danielgindi/Charts.git
+  XLForm:
+    :commit: 9baeda1b0d6fb9a9c4684ab3b65b6820165a91c8
+    :git: https://github.com/choefele/XLForm
 
 SPEC CHECKSUMS:
   Charts: b48fcc8d7190de910ff9e9748f5360c8ea7856e5
   XLForm: 2250b4e96ab8ffa5f3355838c79edd90de451782
 
-PODFILE CHECKSUM: 904eb54de5b189b8a1f4b88dd2a0e601fa6472d6
+PODFILE CHECKSUM: e743c21587e8b0f3a501b6173af6a59f358778d0
 
 COCOAPODS: 1.1.0.beta.2
