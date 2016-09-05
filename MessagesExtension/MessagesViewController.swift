@@ -30,7 +30,7 @@ class MessagesViewController: MSMessagesAppViewController {
             let pollListViewController: PollListViewController = instantiateViewController()
             controller = pollListViewController
         } else {
-            let pollViewController: PollViewController2 = instantiateViewController(storyboardName: "PollViewController")
+            let pollViewController: PollViewController = instantiateViewController()
             pollViewController.delegate = self
             controller = pollViewController
             

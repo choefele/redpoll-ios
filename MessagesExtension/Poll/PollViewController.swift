@@ -7,71 +7,98 @@
 //
 
 import UIKit
-import Eureka
+import XLForm
 
 protocol PollViewControllerDelegate: class {
     func pollViewController(pollViewController: PollViewController, didUpdatePollForm pollForm: PollForm)
     func pollViewController(pollViewController: PollViewController, didCreatePollForm pollForm: PollForm)
 }
 
-class PollViewController: FormViewController {
+class PollViewController: XLFormViewController {
     weak var delegate: PollViewControllerDelegate?
 
-    private var pollForm = PollForm()
-    private let titleRow = TextRow()
-    private var optionsSection = Section("Options")
+    fileprivate var pollForm = PollForm()
+    fileprivate let titleRow: XLFormRowDescriptor
+    fileprivate let optionsSection: XLFormSectionDescriptor
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    required init!(coder aDecoder: NSCoder!) {
+        let titleSection = XLFormSectionDescriptor()
+        titleRow = XLFormRowDescriptor(tag: nil, rowType: XLFormRowDescriptorTypeText, title: "Title")
+        titleRow.cellConfig.setObject("Title", forKey: NSString(string: "textField.placeholder"))
+        titleRow.cellConfig.setObject(NSNumber(value: NSTextAlignment.right.rawValue), forKey: NSString(string: "textField.textAlignment"))
+        titleRow.isRequired = true
+        titleSection.addFormRow(titleRow)
+        
+        optionsSection = XLFormSectionDescriptor.formSection(withTitle: "Options", sectionOptions: [.canReorder, .canInsert, .canDelete], sectionInsertMode: .button)
+        optionsSection.multivaluedAddButton?.title = "Add New Option"
+        let optionsRow = XLFormRowDescriptor(tag: nil, rowType: XLFormRowDescriptorTypeName)
+        optionsSection.multivaluedRowTemplate = optionsRow
+        
+        let buttonSection = XLFormSectionDescriptor()
+        let buttonRow = XLFormRowDescriptor(tag: nil, rowType: XLFormRowDescriptorTypeButton, title: "Create Poll")
+        buttonRow.action.formSelector = #selector(createPoll)
+        buttonSection.addFormRow(buttonRow)
 
-        let titleSection = Section()
-        form.append(titleSection)
-
-        titleRow.title = "Title"
-        titleRow.placeholder = "Enter text here"
-        titleRow.onChange({ [unowned self] row in
-            self.updatePoll()
-        })
-        titleSection.append(titleRow)
-
-        form.append(optionsSection)
-        optionsSection.append(DateRow() { row in
-            row.title = "Date Row"
-            row.value = Date(timeIntervalSinceReferenceDate: 0)
-        })
-        optionsSection.append(ButtonRow() { row in
-            row.title = "Add option"
-            row.onCellSelection({ [unowned self] cell, row in
-                self.optionsSection.insert(DateRow() { row in
-                    row.title = "Date Row"
-                    row.value = Date(timeIntervalSinceReferenceDate: 0)
-                }, at:self.optionsSection.count - 1)
-            })
-        })
-        let buttonSection = Section()
-        form.append(buttonSection)
-        buttonSection.append(ButtonRow() { row in
-            row.title = "Create Poll"
-            row.onCellSelection({ [unowned self] cell, row in
-                self.createPoll()
-            })
-        })
+        super.init(coder: aDecoder)
+        
+        form = XLFormDescriptor(title: "Poll")
+        form.addFormSection(titleSection)
+        form.addFormSection(optionsSection)
+        form.addFormSection(buttonSection)
     }
-
-    private func updatePoll() {
-        pollForm.title = titleRow.value
-
-//        pollForm.options.removeAll()
-//        for row in optionsSection {
-//            if let dateRow = row as? DateRow, let dateRowValue = dateRow.value {
-////                pollForm.options.append(.date(dateRowValue))
-//            }
-//        }
-
-        delegate?.pollViewController(pollViewController: self, didUpdatePollForm: pollForm)
-    }
-
-    private func createPoll() {
+    
+    @objc private func createPoll(sender: XLFormRowDescriptor) {
+        deselectFormRow(sender)
+        
         delegate?.pollViewController(pollViewController: self, didCreatePollForm: pollForm)
+    }
+}
+
+extension PollViewController {
+    override func willMove(toParentViewController parent: UIViewController?) {
+        super.willMove(toParentViewController: parent)
+    }
+    
+    override func formRowHasBeenAdded(_ formRow: XLFormRowDescriptor!, at indexPath: IndexPath!) {
+        super.formRowHasBeenAdded(formRow, at: indexPath)
+        
+        updatePoll()
+    }
+    
+    override func formRowHasBeenRemoved(_ formRow: XLFormRowDescriptor!, at indexPath: IndexPath!) {
+        super.formRowHasBeenRemoved(formRow, at: indexPath)
+        
+        updatePoll()
+    }
+    
+    override func formRowDescriptorValueHasChanged(_ formRow: XLFormRowDescriptor!, oldValue: Any!, newValue: Any!) {
+        super.formRowDescriptorValueHasChanged(formRow, oldValue: oldValue, newValue: newValue)
+        
+        updatePoll()
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        super.tableView(tableView, moveRowAt: sourceIndexPath, to: destinationIndexPath)
+        
+        updatePoll()
+    }
+    
+    private func updatePoll() {
+        pollForm.title = titleRow.value as? String
+        
+        pollForm.options.removeAll()
+        for row in optionsSection.formRows {
+            guard let formRowDescriptor = row as? XLFormRowDescriptor else { continue }
+            
+            if formRowDescriptor.rowType == XLFormRowDescriptorTypeName,
+                let stringOption = formRowDescriptor.value as? String {
+                if !stringOption.isEmpty {
+                    pollForm.options.append(.string(stringOption))
+                }
+            }
+        }
+        
+        print(pollForm)
+        delegate?.pollViewController(pollViewController: self, didUpdatePollForm: pollForm)
     }
 }

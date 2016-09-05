@@ -10,11 +10,11 @@ import Foundation
 import Messages
 import Charts
 
-extension MessagesViewController: PollViewControllerDelegate2 {
-    func pollViewController(pollViewController: PollViewController2, didUpdatePollForm pollForm: PollForm) {
+extension MessagesViewController: PollViewControllerDelegate {
+    func pollViewController(pollViewController: PollViewController, didUpdatePollForm pollForm: PollForm) {
     }
 
-    func pollViewController(pollViewController: PollViewController2, didCreatePollForm pollForm: PollForm) {
+    func pollViewController(pollViewController: PollViewController, didCreatePollForm pollForm: PollForm) {
         guard let conversation = activeConversation else { fatalError("Expected a conversation") }
 
         let message = composeMessage(with: pollForm, caption: "Caption", session: conversation.selectedMessage?.session)
