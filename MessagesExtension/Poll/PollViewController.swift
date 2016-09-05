@@ -17,7 +17,6 @@ protocol PollViewControllerDelegate: class {
 class PollViewController: XLFormViewController {
     weak var delegate: PollViewControllerDelegate?
 
-    fileprivate var pollForm = PollForm()
     fileprivate let titleRow: XLFormRowDescriptor
     fileprivate let optionsSection: XLFormSectionDescriptor
     
@@ -30,7 +29,7 @@ class PollViewController: XLFormViewController {
         titleSection.addFormRow(titleRow)
         
         optionsSection = XLFormSectionDescriptor.formSection(withTitle: "Options", sectionOptions: [.canReorder, .canInsert, .canDelete], sectionInsertMode: .button)
-        optionsSection.multivaluedAddButton?.title = "Add New Option"
+        optionsSection.multivaluedAddButton?.title = "Add Option"
         let optionsRow = XLFormRowDescriptor(tag: nil, rowType: XLFormRowDescriptorTypeName)
         optionsSection.multivaluedRowTemplate = optionsRow
         
@@ -50,7 +49,42 @@ class PollViewController: XLFormViewController {
     @objc private func createPoll(sender: XLFormRowDescriptor) {
         deselectFormRow(sender)
         
+        let pollForm = exportFormValues()
         delegate?.pollViewController(pollViewController: self, didCreatePollForm: pollForm)
+    }
+    
+    fileprivate func exportFormValues() -> PollForm {
+        var pollForm = PollForm()
+        pollForm.title = titleRow.value as? String
+        
+        pollForm.options.removeAll()
+        for row in optionsSection.formRows {
+            guard let formRowDescriptor = row as? XLFormRowDescriptor else { continue }
+            
+            if formRowDescriptor.rowType == XLFormRowDescriptorTypeName,
+                let stringOption = formRowDescriptor.value as? String {
+                if !stringOption.isEmpty {
+                    pollForm.options.append(.string(stringOption))
+                }
+            }
+        }
+        
+        return pollForm
+    }
+    
+    func importFormValues(pollForm: PollForm?) {
+        guard let pollForm = pollForm else { return }
+        
+        titleRow.value = pollForm.title
+        
+        for option in pollForm.options {
+            switch option {
+            case .string(let stringValue):
+                let formRowDescriptor = formRowFormMultivaluedFormSection(optionsSection)!
+                formRowDescriptor.value = stringValue
+                optionsSection.addFormRow(formRowDescriptor)
+            }
+        }
     }
 }
 
@@ -84,20 +118,7 @@ extension PollViewController {
     }
     
     private func updatePoll() {
-        pollForm.title = titleRow.value as? String
-        
-        pollForm.options.removeAll()
-        for row in optionsSection.formRows {
-            guard let formRowDescriptor = row as? XLFormRowDescriptor else { continue }
-            
-            if formRowDescriptor.rowType == XLFormRowDescriptorTypeName,
-                let stringOption = formRowDescriptor.value as? String {
-                if !stringOption.isEmpty {
-                    pollForm.options.append(.string(stringOption))
-                }
-            }
-        }
-        
+        let pollForm = exportFormValues()
         delegate?.pollViewController(pollViewController: self, didUpdatePollForm: pollForm)
     }
 }

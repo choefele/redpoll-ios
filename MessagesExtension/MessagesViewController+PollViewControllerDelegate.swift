@@ -12,13 +12,15 @@ import Charts
 
 extension MessagesViewController: PollViewControllerDelegate {
     func pollViewController(pollViewController: PollViewController, didUpdatePollForm pollForm: PollForm) {
+        self.pollForm = pollForm
     }
 
     func pollViewController(pollViewController: PollViewController, didCreatePollForm pollForm: PollForm) {
         guard let conversation = activeConversation else { fatalError("Expected a conversation") }
 
-        let message = composeMessage(with: pollForm, caption: "Caption", session: conversation.selectedMessage?.session)
+        self.pollForm = pollForm
 
+        let message = composeMessage(with: pollForm, caption: "Caption", session: conversation.selectedMessage?.session)
         conversation.insert(message) { error in
             if let error = error {
                 print(error)

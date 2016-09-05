@@ -11,6 +11,8 @@ import Messages
 import Charts
 
 class MessagesViewController: MSMessagesAppViewController {
+    var pollForm: PollForm?
+    
     override func willBecomeActive(with conversation: MSConversation) {
         super.willBecomeActive(with: conversation)
         
@@ -31,6 +33,7 @@ class MessagesViewController: MSMessagesAppViewController {
             controller = pollListViewController
         } else {
             let pollViewController: PollViewController = instantiateViewController()
+            pollViewController.importFormValues(pollForm: pollForm)
             pollViewController.delegate = self
             controller = pollViewController
             
