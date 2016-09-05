@@ -22,11 +22,10 @@ class PollViewController: XLFormViewController {
     fileprivate let optionsSection: XLFormSectionDescriptor
     
     required init!(coder aDecoder: NSCoder!) {
-        let titleSection = XLFormSectionDescriptor()
-        titleRow = XLFormRowDescriptor(tag: nil, rowType: XLFormRowDescriptorTypeText, title: "Title")
-        titleRow.cellConfig.setObject("Title", forKey: NSString(string: "textField.placeholder"))
-        titleRow.cellConfig.setObject(NSNumber(value: NSTextAlignment.right.rawValue), forKey: NSString(string: "textField.textAlignment"))
-        titleRow.cellConfig.setObject(NSNumber(value: 10), forKey: NSString(string: XLFormTextFieldMaxNumberOfCharacters))
+        let titleSection = XLFormSectionDescriptor.formSection(withTitle: "Title")
+        titleRow = XLFormRowDescriptor(tag: nil, rowType: XLFormRowDescriptorTypeTextView)
+        titleRow.cellConfig.setObject("E.g. \"What should we eat for dinner?\" ", forKey: NSString(string: "textView.placeholder"))
+        titleRow.cellConfig.setObject(NSNumber(value: 140), forKey: NSString(string: XLFormTextViewMaxNumberOfCharacters))
         titleRow.isRequired = true
         titleSection.addFormRow(titleRow)
         
@@ -99,7 +98,6 @@ extension PollViewController {
             }
         }
         
-        print(pollForm)
         delegate?.pollViewController(pollViewController: self, didUpdatePollForm: pollForm)
     }
 }
