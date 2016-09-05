@@ -26,6 +26,7 @@ class PollViewController: XLFormViewController {
         titleRow = XLFormRowDescriptor(tag: nil, rowType: XLFormRowDescriptorTypeText, title: "Title")
         titleRow.cellConfig.setObject("Title", forKey: NSString(string: "textField.placeholder"))
         titleRow.cellConfig.setObject(NSNumber(value: NSTextAlignment.right.rawValue), forKey: NSString(string: "textField.textAlignment"))
+        titleRow.cellConfig.setObject(NSNumber(value: 10), forKey: NSString(string: XLFormTextFieldMaxNumberOfCharacters))
         titleRow.isRequired = true
         titleSection.addFormRow(titleRow)
         
