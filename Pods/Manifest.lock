@@ -20,7 +20,7 @@ CHECKOUT OPTIONS:
     :commit: 7a9b1c383a7b57f07dc2bed6f756463c327d2250
     :git: https://github.com/danielgindi/Charts.git
   XLForm:
-    :commit: 9baeda1b0d6fb9a9c4684ab3b65b6820165a91c8
+    :commit: 64ab7ccac0fc38d28aa6211f924618d80b73b1df
     :git: https://github.com/choefele/XLForm
 
 SPEC CHECKSUMS:
