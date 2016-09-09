@@ -15,11 +15,12 @@
 		62A3055F1D73147700A8CD57 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A3055E1D73147700A8CD57 /* Messages.framework */; };
 		62A305621D73147700A8CD57 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A305611D73147700A8CD57 /* MessagesViewController.swift */; };
 		62A305651D73147700A8CD57 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A305631D73147700A8CD57 /* MainInterface.storyboard */; };
-		62BE7A651D7762B5001CDAE6 /* PollForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE7A641D7762B5001CDAE6 /* PollForm.swift */; };
+		62BE3AE91D8338930080B307 /* Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE3AE61D8338930080B307 /* Forms.swift */; };
+		62BE3AEA1D8338930080B307 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE3AE71D8338930080B307 /* Models.swift */; };
+		62BE3AEB1D8338930080B307 /* PollService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE3AE81D8338930080B307 /* PollService.swift */; };
 		62BE7A6C1D7765FC001CDAE6 /* PollListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BE7A671D7765FC001CDAE6 /* PollListViewController.storyboard */; };
 		62BE7A6D1D7765FC001CDAE6 /* PollListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE7A681D7765FC001CDAE6 /* PollListViewController.swift */; };
 		62BE7A6E1D7765FC001CDAE6 /* PollViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BE7A6A1D7765FC001CDAE6 /* PollViewController.storyboard */; };
-		62D07B6E1D736038000C4E05 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D07B6D1D736038000C4E05 /* Poll.swift */; };
 		CF311FBF9C6A0DDBF2A77679 /* Pods_MessagesExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B594AB61F0B52605C79921 /* Pods_MessagesExtension.framework */; };
 		FC11903EDECAD26A9B4D276C /* Pods_Redpoll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1DE66342E7F65E89A366C3 /* Pods_Redpoll.framework */; };
 /* End PBXBuildFile section */
@@ -62,11 +63,12 @@
 		62A305611D73147700A8CD57 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		62A305641D73147700A8CD57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		62A305681D73147700A8CD57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62BE7A641D7762B5001CDAE6 /* PollForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollForm.swift; sourceTree = "<group>"; };
+		62BE3AE61D8338930080B307 /* Forms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forms.swift; sourceTree = "<group>"; };
+		62BE3AE71D8338930080B307 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		62BE3AE81D8338930080B307 /* PollService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollService.swift; sourceTree = "<group>"; };
 		62BE7A671D7765FC001CDAE6 /* PollListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PollListViewController.storyboard; sourceTree = "<group>"; };
 		62BE7A681D7765FC001CDAE6 /* PollListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollListViewController.swift; sourceTree = "<group>"; };
 		62BE7A6A1D7765FC001CDAE6 /* PollViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PollViewController.storyboard; sourceTree = "<group>"; };
-		62D07B6D1D736038000C4E05 /* Poll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
 		A574D8771FE79A1717418258 /* Pods-MessagesExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.release.xcconfig"; sourceTree = "<group>"; };
 		B956750B9F7569E0A78B5DBF /* Pods-Redpoll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Redpoll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Redpoll/Pods-Redpoll.debug.xcconfig"; sourceTree = "<group>"; };
 		DC740D87C584B043196243F5 /* Pods-Redpoll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Redpoll.release.xcconfig"; path = "Pods/Target Support Files/Pods-Redpoll/Pods-Redpoll.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,11 +154,21 @@
 				03D1D1A31D787959009B1F0A /* MessagesViewController+PollViewControllerDelegate.swift */,
 				62BE7A661D7765FC001CDAE6 /* Poll List */,
 				62BE7A691D7765FC001CDAE6 /* Poll */,
-				62D07B6C1D736038000C4E05 /* Model */,
+				62BE3AE51D8338930080B307 /* Service */,
 				624F4A301D7314D900C32864 /* Assets.xcassets */,
 				62A305681D73147700A8CD57 /* Info.plist */,
 			);
 			path = MessagesExtension;
+			sourceTree = "<group>";
+		};
+		62BE3AE51D8338930080B307 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				62BE3AE61D8338930080B307 /* Forms.swift */,
+				62BE3AE71D8338930080B307 /* Models.swift */,
+				62BE3AE81D8338930080B307 /* PollService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		62BE7A661D7765FC001CDAE6 /* Poll List */ = {
@@ -175,15 +187,6 @@
 				628F9A9D1D7B5C5E00BC7913 /* PollViewController.swift */,
 			);
 			path = Poll;
-			sourceTree = "<group>";
-		};
-		62D07B6C1D736038000C4E05 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				62D07B6D1D736038000C4E05 /* Poll.swift */,
-				62BE7A641D7762B5001CDAE6 /* PollForm.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,12 +378,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62D07B6E1D736038000C4E05 /* Poll.swift in Sources */,
 				628F9A9E1D7B5C5E00BC7913 /* PollViewController.swift in Sources */,
+				62BE3AE91D8338930080B307 /* Forms.swift in Sources */,
 				03D1D1A41D787959009B1F0A /* MessagesViewController+PollViewControllerDelegate.swift in Sources */,
+				62BE3AEA1D8338930080B307 /* Models.swift in Sources */,
 				62BE7A6D1D7765FC001CDAE6 /* PollListViewController.swift in Sources */,
+				62BE3AEB1D8338930080B307 /* PollService.swift in Sources */,
 				62A305621D73147700A8CD57 /* MessagesViewController.swift in Sources */,
-				62BE7A651D7762B5001CDAE6 /* PollForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ struct Poll {
     var id: String
     var title: String
     var options: [PollOption]
+    var participants: [PollParticipant]
 }
 
 struct PollOption {
@@ -21,4 +22,9 @@ struct PollOption {
 
 enum PollOptionValue {
     case string(String)
+}
+
+struct PollParticipant {
+    var name: String
+    var answers: [String: Bool?]
 }
